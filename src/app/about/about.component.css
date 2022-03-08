@@ -1,0 +1,9 @@
+
+.about{
+  background-color:var(--main-color);
+}
+p{
+  font-size: 1.25rem;
+  color: white;
+}
+

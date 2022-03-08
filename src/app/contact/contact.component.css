@@ -1,0 +1,5 @@
+
+.icon::after,
+.icon::before{
+    background-color: black;
+}

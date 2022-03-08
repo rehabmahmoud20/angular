@@ -1,0 +1,46 @@
+
+.icon-special::after,
+.icon-special::before {
+  background-color: black ;
+}
+.size{
+    font-size: 2rem;
+}
+
+.mainimg{
+    position:relative
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left:0;
+    bottom: 0;
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100%;
+    display: none;
+    
+   
+}
+.mainimg:hover .overlay{
+    
+    display: block;
+    
+
+}
+.plus {
+    color:white;
+    font-size: 6rem;
+    width: fit-content;
+    
+}
+.close-window{
+    background-color: var(--main-color);
+}
+.custom-btn{
+    font-size: 2rem;
+    color: var(--main-color) !important;
+    cursor: pointer;
+}

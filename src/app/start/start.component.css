@@ -1,0 +1,19 @@
+header {
+  background-color: #1abc9c;
+}
+h1 {
+  font-size: 4rem;
+}
+p {
+  font-size: 1.25rem;
+}
+
+
+html,
+body {
+  color: inherit;}
+/* }
+.icon-special::after,
+.icon-special::before {
+  background-color: blueviolet !important;
+} */
