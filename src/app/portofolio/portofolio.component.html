@@ -2,16 +2,18 @@
   <div class="container">
     <div class="text-center w-50 mx-auto py-5">
       <h2>PORTFOLIO</h2>
-      <div class="icon icon-special mx-auto"><i class="fas fa-star icon-size"></i></div>
+      <div class="icon icon-special mx-auto">
+        <i class="fas fa-star icon-size"></i>
+      </div>
     </div>
 
     <div class="row gy-3">
       <div
-        class="col-md-4 mx-auto  mainimg"
+        class="col-md-4 mx-auto mainimg"
         *ngFor="let item of items; let i = index"
       >
         <img class="w-100 rounded" [src]="item.image" />
-        <div class="overlay rounded" (click)="openModal(i)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="overlay rounded" (click)="openModal(i)">
           <div
             class="contain h-100 d-flex justify-content-center align-items-center"
           >
@@ -22,34 +24,58 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl">
-            <div class="modal-content ">
-              <div class="position-relative ">
-                <div class="text-center w-50 mx-auto py-5 ">
-                  <h2>{{selectedItem.title}}</h2>
-                  <div class="icon icon-special mx-auto"><i class="fas fa-star icon-size"></i></div>
-                </div>
-               
-                <div  class=" position-absolute top-0 end-0 custom-btn px-3" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="position-relative">
+            <div class="text-center w-50 mx-auto py-5">
+              <h2>{{ selectedItem.title }}</h2>
+              <div class="icon icon-special mx-auto">
+                <i class="fas fa-star icon-size"></i>
               </div>
-              <div class=" text-center w-75 mx-auto">
-              
-               <img class=" rounded w-75 img-fluid mb-3" [src]="selectedItem.image" />
-              
-               <p class="w-75 mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-              
             </div>
-              <div class="d-flex justify-content-center mb-3">
-                <button type="button" class="btn btn-secondary mx-auto close-window" data-bs-dismiss="modal" aria-label="Close"><i class="pe-1 fa-solid fa-xmark"></i>Close Window</button>
-          
-              </div>
+
+            <div
+              class="position-absolute top-0 end-0 custom-btn px-3"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i>
             </div>
           </div>
+          <div class="text-center w-75 mx-auto">
+            <img
+              class="rounded w-75 img-fluid mb-3"
+              [src]="selectedItem.image"
+            />
+
+            <p class="w-75 mx-auto">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
+              neque assumenda ipsam nihil, molestias magnam, recusandae quos
+              quis inventore quisquam velit asperiores, vitae? Reprehenderit
+              soluta, eos quod consequuntur itaque. Nam.
+            </p>
+          </div>
+          <div class="d-flex justify-content-center mb-3">
+            <button
+              type="button"
+              class="btn btn-secondary mx-auto close-window"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="pe-1 fa-solid fa-xmark"></i>Close Window
+            </button>
+          </div>
         </div>
-        
       </div>
-     
     </div>
   </div>
 </section>
